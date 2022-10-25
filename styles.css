@@ -1,0 +1,393 @@
+/*
+  Web Design II
+  Ex. 05
+  CSS
+  António Castro, nº201206754
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+/* CSS super reset */
+
+* {
+  margin: 0;
+}
+
+:root {
+  --background: #faf6da;
+  --text_color: #1d1e19;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background: var(--background);
+  color: var(--text_color);
+  scroll-behavior: smooth;
+}
+
+header {
+  background: var(--text_color);
+  height: 30vh;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+header ul {
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+.stills ul {
+  text-align: center;
+  justify-content: center;
+  list-style-type: none;
+}
+
+h1 {
+  color: var(--background);
+  font-weight: 300;
+  transition: font-weight 0.8s ease-out;
+  text-align: center;
+  padding: 1em 0 0.25em 0;
+}
+
+h1:hover {
+  font-weight: 700;
+}
+
+h2 {
+  text-align: left;
+  padding: 1em;
+  margin-left: 1em;
+  font-weight: 700;
+  transition: font-weight 0.8s ease-in;
+}
+
+h2:hover {
+  font-weight: 500;
+}
+
+.columns1 p {
+  margin: 1em;
+  padding: 0em 2.5em;
+  padding-right: 5em;
+}
+
+.movies_description p {
+  padding-bottom: 1.25em;
+}
+
+.columns2::-webkit-scrollbar {
+  display: none;
+}
+
+.columns2 ul {
+  list-style-type: none;
+  margin: auto;
+}
+
+.columns2 ul li {
+  padding: 0.2em 0;
+}
+
+.columns2 li button {
+  background-color: var(--background);
+  text-align: left;
+}
+
+.movies {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 3em 3em 0.5em 3em;
+  background-color: var(--text_color);
+  color: var(--background);
+}
+
+.flex {
+  display: flex;
+}
+
+.movieposters {
+  display: none;
+}
+
+.movies p {
+  padding-left: 5em;
+  max-width: 60vw;
+  text-align: left;
+}
+
+.btns {
+  width: 60px;
+  height: 2.5em;
+  line-height: 0em;
+  border-radius: 15px;
+  background-color: var(--background);
+}
+
+.btns:hover {
+  background-color: var(--background);
+  color: var(--text_color);
+}
+
+.stills img {
+  width: 80px;
+}
+
+.sectionclose button {
+  background-color: var(--background);
+  color: var(--text_color);
+  width: 30px;
+  height: 30px;
+  line-height: 0em;
+  border-radius: 30px;
+  vertical-align: middle;
+  float: right;
+}
+
+.sectionclose button:hover {
+  color: var(--background);
+  background-color: var(--text_color);
+}
+
+.commentdiv {
+  background-color: var(--text_color);
+  margin: auto;
+  padding-bottom: 1em;
+}
+
+#ipttxt {
+  width: 50%;
+  height: 15vh;
+  margin-bottom: 1.5em;
+}
+
+.moviereview {
+  background-color: var(--text_color);
+  text-align: center;
+  padding-bottom: 0.2em;
+}
+
+.submit {
+  vertical-align: top;
+  margin: auto;
+  display: none;
+}
+
+.write {
+  vertical-align: top;
+  margin: auto;
+  display: none;
+}
+
+.your {
+  display: none;
+  color: var(--background);
+}
+
+.submittext {
+  width: 50%;
+  margin: auto;
+}
+
+.stars {
+  display: none;
+}
+
+.opacity100 {
+  opacity: 100%;
+}
+
+.stars_stars a {
+  opacity: 50%;
+}
+
+.stars_stars:hover a {
+  opacity: 100%;
+  cursor: crosshair;
+}
+
+.stars_stars a:hover {
+  opacity: 100%;
+  cursor: crosshair;
+}
+
+.stars_stars a:active {
+  opacity: 100%;
+}
+
+.stars_stars a:hover ~ a {
+  opacity: 50%;
+  cursor: crosshair;
+}
+
+#iptbtn {
+  color: var(--background);
+  background-color: var(--text_color);
+  border-radius: 30px;
+  width: 120px;
+  height: 30px;
+  margin-right: 1em;
+}
+
+#iptbtn:hover {
+  background-color: var(--background);
+  color: var(--text_color);
+  cursor: crosshair;
+}
+
+@media only screen and (min-width: 875px) and (max-width: 2500px) {
+  .columns {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .columns1 {
+    padding-bottom: 1.5em;
+    margin: auto;
+  }
+
+  .columns2 {
+    margin-left: 1em;
+    position: relative;
+    top: 0;
+    height: 100vh;
+    padding-top: 2em;
+    min-width: 300px;
+    max-width: 500px;
+  }
+
+  .burger img {
+    width: 25px;
+    float: right;
+    position: sticky;
+  }
+
+  .columns2 button {
+    border-radius: 30px;
+    width: 255px;
+    max-width: 255px;
+    padding: 0.75em 1em;
+    margin-bottom: 0.5em;
+    display: none;
+  }
+
+  .buttons_style button {
+    width: 60px;
+    height: 2.5em;
+    line-height: 0em;
+    border-radius: 15px;
+    vertical-align: middle;
+  }
+
+  .buttons_style button {
+    color: var(--background);
+    background-color: var(--text_color);
+  }
+
+  .buttons_style button:hover {
+    background-color: var(--background);
+    color: var(--text_color);
+  }
+
+  .columns2 button:hover {
+    background-color: var(--text_color);
+    color: var(--background);
+  }
+
+  .columns2 li img {
+    display: none;
+  }
+
+  .posters img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3%;
+  }
+
+  .fincher {
+    position: absolute;
+    display: block;
+    top: 10;
+  }
+
+  .fincher img {
+    width: 300px;
+    height: 300px;
+    padding-bottom: 3em;
+    object-fit: cover;
+    border-radius: 3%;
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 874px) {
+  .columns {
+    display: block;
+  }
+
+  .columns2 {
+    padding-bottom: 2em;
+    padding-top: 2em;
+  }
+
+  .burger img {
+    display: none;
+  }
+
+  .columns2 button {
+    display: block;
+    border-radius: 30px;
+    width: 70vw;
+    margin: 0 auto;
+    padding: 0.75em 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .fincher {
+    display: none;
+  }
+
+  ul {
+    padding: 0 1em;
+  }
+
+  button {
+    border-radius: 50px;
+    width: 100%;
+    padding: 1.2em 1em;
+  }
+
+  li {
+    display: block;
+  }
+
+  li img {
+    width: 20px;
+    vertical-align: middle;
+    float: right;
+  }
+
+  .stills img {
+    width: 60px;
+  }
+
+  .movies {
+    display: block !important;
+  }
+
+  .movies img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3%;
+  }
+}
